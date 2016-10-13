@@ -22,7 +22,6 @@ if [ ! -e ./stm8flash ]; then
 	git clone ${git_stm8flash} ./stm8flash
 	echo "Build stm8flash..."
 	cd stm8flash
-	./configure
 	make
 	cd ..
 else
