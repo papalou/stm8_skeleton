@@ -1,0 +1,29 @@
+-------------------------
+/*/     Compiling     /*/
+-------------------------
+
+1) Compil stm8flash
+	& cd stm8flash && make
+
+2) Compil src
+	& cd src && make && make flash
+
+-------------------------
+/*/  Troubleshooting  /*/
+-------------------------
+
+#Unprotect rom
+$ echo "00" | xxd -r -p >ROP_CLEAR.bin
+$ stm8flash -c stlinkv2 -p stm8s103f3 -s opt -w ROP_CLEAR.bin 
+
+#Factory default:
+echo "00 00 ff 00 ff 00 ff 00 ff 00 ff" | xxd -r -p > factory_defaults.bin
+stm8flash -c stlinkv2 -p stm8s103f3 -s opt -w factory_defaults.bin
+
+#Flash device by hand:
+stm8flash -c stlinkv2 -p stm8s103f3 -w blinky.ihx
+
+
+
+
+

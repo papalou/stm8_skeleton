@@ -1,0 +1,12 @@
+#Ignore all file create by compilation
+*.ihx
+*.rel
+*.asm
+*.lst
+*.sym
+*.lk
+*.mem
+*.rst
+*.map
+*.cdb
+*.o
