@@ -4,6 +4,8 @@ svn_sdcc="svn://svn.code.sf.net/p/sdcc/code/trunk/sdcc"
 git_stm8flash="https://github.com/vdudouyt/stm8flash"
 git_src_test="https://github.com/vdudouyt/sdcc-examples-stm8.git"
 
+
+#Check if svn and git are installed
 command -v git >/dev/null 2>&1 || { echo "I require git but it's not installed.  Aborting." >&2; exit 1; }
 command -v svn >/dev/null 2>&1 || { echo "I require svn but it's not installed.  Aborting." >&2; exit 1; }
 
