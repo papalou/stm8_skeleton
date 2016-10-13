@@ -2,11 +2,21 @@
 /*/     Compiling     /*/
 -------------------------
 
-1) Compil stm8flash
-	& cd stm8flash && make
+1) To genrate developpement environnement
+	./gen_env.sh
 
-2) Compil src
-	& cd src && make && make flash
+	Note: After the checkout you shall buil stm8flash and sdcc
+
+2) Compil stm8flash
+	cd stm8flash && make
+
+3) Compil src
+	cd src
+	make
+
+4) To flash stm8
+	cd src
+	make flash
 
 -------------------------
 /*/  Troubleshooting  /*/
