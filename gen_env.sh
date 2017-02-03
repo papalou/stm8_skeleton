@@ -31,7 +31,7 @@ if [ ! -e ./sdcc ]; then
 	echo "==============================="
 	echo "||       Clone sdcc repo     ||"
 	echo "==============================="
-	git clone ${svn_sdcc} sdcc
+	svn checkout ${svn_sdcc} sdcc
 else
 	echo "sdcc folder exist, don't clone it."
 fi
